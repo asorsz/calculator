@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import '../css/App.css';
+import Buttons from './Buttons';
+import Display from './Display';
 
-function App() {
+const App = () => {
+  const [display, setDisplay] = useState('0');
+  
   return (
-    <div>
-
+    <div id="calculator">
+      <Display display={display} />
+      <Buttons />
+      
     </div>
   );
-}
+};
 
 export default App;
